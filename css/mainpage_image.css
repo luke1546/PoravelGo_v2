@@ -1,0 +1,117 @@
+.container {
+  position: relative;
+  width: 97%;
+}
+
+.image {
+  display: block;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: gray;
+}
+
+.container:hover .overlay {
+  opacity: 0.9;
+}
+
+.text2 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /*margin-bottom:0px;*/
+  /*height:100px*/
+}
+
+  #grid1 {
+    display:grid;
+    grid-template-columns: 1fr 1.5fr;
+    margin-left:20%;
+    font-size:20px;
+    margin-bottom:100px;
+  }
+  #grid2 {
+    display:grid;
+    grid-template-columns: 420px 420px 420px;
+    margin-left:17%;
+    font-size:20px;
+    margin-bottom:100px;
+  }
+  #grid3 {
+    display:grid;
+    grid-template-columns: 590px 500px;
+    margin-left:15%;
+    font-size:20px;
+    margin-bottom:100px;
+  }
+  #grid4   {
+    display:grid;
+    grid-template-rows: 270px;
+    margin-left:10%;
+    font-size:20px;
+    margin-bottom:100px;
+  }
+  #grid5   {
+    display:grid;
+    grid-template-columns: 320px 500px;
+    font-size:20px;
+    margin-bottom:100px;
+  }
+
+.scale {
+  transform: scale(1);
+  -webkit-transform: scale(1);  /*크롬*/
+  -moz-transform: scale(1);   /*firefox*/
+  -ms-transform: scale(1);  
+  -o-transform: scale(1);     /*오페라*/
+  transition: all 0.3s ease-in-out;   /* 부드러운 모션을 위해 추가*/
+}
+.scale:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
